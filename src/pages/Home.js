@@ -109,6 +109,20 @@ const Home = () => {
             <Row className="g-4">
               <Col lg={12}>
                 <Card
+                  className="fund-card h-70 border-0 shadow-xl bg-white"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <Card.Body className="p-4 p-lg-5">
+                    <Card.Title className="h3 fw-bold text-gold mb-4 text-center fund-table-title">
+                      Plan Summary
+                    </Card.Title>
+                    <FundTable data={fundPlans} />
+                  </Card.Body>
+                </Card>
+              </Col>
+              <Col lg={12}>
+                <Card
                   className="fund-card h-100 border-0 shadow-xl bg-white"
                   data-aos="fade-up"
                 >
@@ -166,20 +180,6 @@ const Home = () => {
                         </li>
                       ))}
                     </ul>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col lg={12}>
-                <Card
-                  className="fund-card h-70 border-0 shadow-xl bg-white"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <Card.Body className="p-4 p-lg-5">
-                    <Card.Title className="h3 fw-bold text-gold mb-4 text-center fund-table-title">
-                      Plan Summary
-                    </Card.Title>
-                    <FundTable data={fundPlans} />
                   </Card.Body>
                 </Card>
               </Col>
