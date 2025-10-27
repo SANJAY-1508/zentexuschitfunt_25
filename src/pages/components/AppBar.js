@@ -1,4 +1,3 @@
-// AppBar.jsx - Enhanced with better animations
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Marquee from "react-fast-marquee";

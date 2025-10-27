@@ -1,4 +1,3 @@
-// FundPlanCard.jsx - Enhanced with better transitions
 import React from "react";
 import "./FundPlanCard.css";
 

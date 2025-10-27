@@ -1,4 +1,3 @@
-// FundTable.jsx - Enhanced with better hover effects
 import React from "react";
 
 const FundTable = ({ data }) => {

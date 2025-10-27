@@ -1,4 +1,3 @@
-// Footer.jsx - Updated with functional links and smooth scroll
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 

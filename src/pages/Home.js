@@ -1,4 +1,3 @@
-// Home.jsx - Updated with Carousel for Testimonials and IDs for smooth scroll
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
