@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import FundTable from "./components/FundTable";
 import FundPlanCard from "./components/FundPlanCard";
 import img1 from "../assets/diwali-chit-fund-banner-D2a1cjBH (1).jpeg";
-import img2 from "../assets/chottabeam.gif";
+import img2 from "../assets/diwali-chit-fund-banner-D2a1cjBH (1).jpeg";
 
 const Home = () => {
   useEffect(() => {
