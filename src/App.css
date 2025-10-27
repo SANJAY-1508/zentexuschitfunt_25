@@ -73,7 +73,7 @@ html {
 .appbar-bg {
   background: linear-gradient(135deg, #e8f4fd 0%, #d5e8f2 100%);
   color: #2c3e50;
-
+  padding: 10px 0;
   box-shadow: 0 2px 10px rgba(52, 152, 219, 0.15);
 }
 
@@ -100,12 +100,39 @@ html {
   border-radius: 25px;
   font-weight: bold;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-cta:hover {
   transform: scale(1.05);
   color: #fff;
   box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Blinking animation for the button */
+.blink-btn {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* Arrow icon styling */
+.btn-cta i {
+  transition: transform 0.3s ease;
+}
+
+.btn-cta:hover i {
+  transform: translateX(3px);
 }
 
 .marquee-container {

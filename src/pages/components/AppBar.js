@@ -32,7 +32,9 @@ const AppBar = () => {
             lg={3}
             className="d-flex justify-content-center justify-content-lg-end mb-2 mb-lg-0"
           >
-            <button className="btn btn-cta">Download APK</button>
+            <button className="btn btn-cta blink-btn text-white">
+              Download APK <i className="fas fa-arrow-right ms-2"></i>
+            </button>
           </Col>
         </Row>
       </Container>
