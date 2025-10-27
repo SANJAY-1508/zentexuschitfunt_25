@@ -604,39 +604,3 @@ html {
     height: 80px;
   }
 }
-
-/* Additional CSS for side images and centering */
-.side-image-left,
-.side-image-right {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.side-image-left img,
-.side-image-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-/* Ensure key info list items are properly spaced for centering */
-.info-item {
-  justify-content: flex-start !important; /* Override for list items to align left inside */
-  max-width: 80%;
-}
-
-/* Responsive adjustments */
-@media (max-width: 991px) {
-  .side-image-left,
-  .side-image-right {
-    display: none;
-  }
-
-  .info-item {
-    max-width: 100%;
-    justify-content: flex-start !important;
-  }
-}

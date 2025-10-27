@@ -124,16 +124,7 @@ const Home = () => {
               <Col lg={12}>
                 <Row className="justify-content-center align-items-stretch g-4">
                   {/* Left Side Image */}
-                  <Col lg={3} md={3} className="d-none d-lg-block">
-                    <div className="side-image-left h-100">
-                      <img
-                        src={img2}
-                        className="img-fluid rounded-3 shadow h-50"
-                        alt="Decorative Left"
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                  </Col>
+                  <Col lg={3} md={3} className="d-none d-lg-block"></Col>
 
                   {/* Center Key Information */}
                   <Col lg={6} md={6}>
@@ -200,16 +191,7 @@ const Home = () => {
                   </Col>
 
                   {/* Right Side Image */}
-                  <Col lg={3} md={3} className="d-none d-lg-block">
-                    <div className="side-image-right h-100">
-                      <img
-                        src={img2}
-                        className="img-fluid rounded-3 shadow h-50"
-                        alt="Decorative Right"
-                        style={{ objectFit: "cover" }}
-                      />
-                    </div>
-                  </Col>
+                  <Col lg={3} md={3} className="d-none d-lg-block"></Col>
                 </Row>
               </Col>
             </Row>
