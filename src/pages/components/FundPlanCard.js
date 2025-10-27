@@ -1,3 +1,4 @@
+// FundPlanCard.jsx - Attractive gradient cards
 import React from "react";
 import "./FundPlanCard.css";
 
@@ -13,25 +14,24 @@ const FundPlanCard = ({
     <div className="fund-plan-container">
       <div className="image-wrapper">
         <img src={image} className="fund-image" alt="fund" />
-
-        {/* Double Circle */}
-        <div className="big-circle">
-          <div className="small-circle">
-            <h2>₹{amount}</h2>
-            <p>{title}</p>
+        <div className="circle-overlay">
+          <div className="big-circle">
+            <div className="small-circle">
+              <h2>₹{amount}</h2>
+              <p>{title}</p>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Content */}
-      <div className="bottom-content d-flex justify-content-between">
-        <div>
+      <div className="bottom-content">
+        <div className="left-info">
           <h6>{monthsText}</h6>
           <h6>{bonusText}</h6>
         </div>
-        <div className="text-end">
-          <h6>Total</h6>
-          <h6>₹{totalText}</h6>
+        <div className="right-info">
+          <h6 className="total-label">Total</h6>
+          <h6 className="total-amount">₹{totalText}</h6>
         </div>
       </div>
     </div>

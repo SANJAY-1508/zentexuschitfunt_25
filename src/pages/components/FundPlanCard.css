@@ -1,69 +1,156 @@
-.fund-plans {
-  background-color: #ffffff1a;
-  border-radius: 5px;
+/* FundPlanCard.css - Vibrant yet professional gradients */
+.fund-plan-container {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #fff, #f0f8ff);
+  color: #2c3e50;
+  box-shadow: 0 10px 30px rgba(52, 152, 219, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  border: 1px solid rgba(52, 152, 219, 0.2);
 }
 
-.fund-plan-container {
-  width: 300px;
-  border-radius: 15px;
-  overflow: hidden;
-  background-color: #813a8a;
-  color: white;
+.fund-plan-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2);
 }
 
 .image-wrapper {
   position: relative;
+  height: 200px;
 }
 
 .fund-image {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
+  filter: brightness(1.05);
 }
 
-/* OUTER BIG CIRCLE */
-.big-circle {
+.circle-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  backdrop-filter: blur(4px);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.1),
+    rgba(155, 89, 182, 0.1)
+  );
 }
 
-/* INNER SMALL CIRCLE */
-.small-circle {
-  width: 130px;
-  height: 130px;
-  background: rgba(255, 255, 255, 0.2);
+.big-circle {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.2),
+    rgba(155, 89, 182, 0.2)
+  );
   border-radius: 50%;
-  backdrop-filter: blur(6px);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.small-circle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.3),
+    rgba(155, 89, 182, 0.3)
+  );
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
 }
 
 .small-circle h2 {
-  margin: 0;
-  font-size: 28px;
+  margin: 0 0 5px 0;
+  font-size: 24px;
   font-weight: bold;
-  color: #ffb300; /* same yellow text as sample */
+  color: #3498db;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .small-circle p {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 500;
 }
 
-/* BOTTOM CONTENT */
 .bottom-content {
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.1),
+    rgba(155, 89, 182, 0.1)
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-info h6,
+.right-info h6 {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.95;
+  color: #2c3e50;
+}
+
+.right-info {
+  text-align: right;
+}
+
+.total-label {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.total-amount {
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .fund-plan-container {
+    max-width: 100%;
+  }
+
+  .big-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .small-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .small-circle h2 {
+    font-size: 20px;
+  }
+
+  .bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
 }

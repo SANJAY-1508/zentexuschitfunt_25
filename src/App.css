@@ -1,39 +1,101 @@
-.mark-bg {
-  background-color: #ffffffc4;
-  color: #08205a;
-  font-family: "regular";
-  padding-top: 10px;
+/* Global Styles - Updated for vibrant AppBar, Marquee, and Footer */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap");
+
+body {
+  font-family: "Noto Sans Tamil", sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #ecf0f1;
 }
+
+.text-gold {
+  color: #f39c12 !important;
+}
+.text-dark {
+  color: #2c3e50 !important;
+}
+.text-muted {
+  color: #7f8c8d !important;
+}
+.opacity-90 {
+  opacity: 0.9;
+}
+.opacity-75 {
+  opacity: 0.75;
+}
+
+/* AppBar - Vibrant gradient matching Fund Details */
+.appbar-bg {
+  background: linear-gradient(135deg, #e8f4fd 0%, #d5e8f2 100%);
+  color: #2c3e50;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.15);
+}
+
 .logo-img {
-  max-height: 100px;
+  max-height: 80px;
+  width: auto;
 }
 
 .appbar-title {
-  font-family: "Noto Sans Tamil", "Latha", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.btn-cta {
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
   font-weight: bold;
-  font-size: 2.5rem;
-  color: #e600ff;
-  text-shadow: 1px 1px 4px #000;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 576px) {
-  .appbar-title {
-    font-size: 1.1rem;
+.btn-cta:hover {
+  transform: scale(1.05);
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.marquee-container {
+  background: linear-gradient(90deg, #3498db, #9b59b6, #f39c12);
+  background-size: 300% 300%;
+  animation: marqueeGradient 2s ease infinite;
+}
+
+@keyframes marqueeGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
-  .appbar-title {
-    font-size: 1.3rem;
-  }
+.marquee-text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Hero */
+/* Hero - Attractive gradient */
 .hero-section {
-  background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(10, 15, 35, 0.9));
+  background: linear-gradient(135deg, #e8f4fd 0%, #d5e8f2 100%);
+  position: relative;
 }
 
-.hero-overlay {
+.hero-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -41,123 +103,207 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(255, 193, 7, 0.1),
-    rgba(255, 87, 34, 0.1)
+    rgba(52, 152, 219, 0.05),
+    rgba(155, 89, 182, 0.05)
   );
-  z-index: 0;
-}
-
-.hero-img {
-  width: 200px;
-  height: 500px;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
-}
-
-.min-vh-75 {
-  min-height: 75vh;
-}
-.min-vh-50 {
-  min-height: 50vh;
-}
-.shadow-xl {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
-}
-.shadow-3xl {
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6) !important;
-}
-.z-index-1 {
   z-index: 1;
 }
 
-/* Sections */
-.fund-details-section,
-.plans-section,
-.cta-section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+.z-2 {
+  z-index: 2;
 }
 
-.testimonials-section {
-  background: linear-gradient(135deg, #ffc107 0%, #ff5722 100%);
-  color: #1a1a2e;
+.hero-title {
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.testimonials-section .text-gold {
-  color: #1a1a2e !important;
-}
-.testimonials-section .bg-dark {
-  background: rgba(255, 255, 255, 0.1) !important;
+.hero-desc {
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
-.fund-card,
-.fund-row {
+.hero-btn-primary {
+  background: linear-gradient(45deg, #3498db, #9b59b6) !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+}
+
+.hero-btn-secondary {
+  border-color: #f39c12 !important;
+  color: #f39c12 !important;
+}
+
+.hero-btn-secondary:hover {
+  background: #f39c12 !important;
+  color: #fff !important;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+.min-vh-70 {
+  min-height: 70vh;
+}
+
+/* Sections - Vibrant professional gradients */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #e8f4fd 0%, #d5e8f2 100%);
+}
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #d5e8f2 0%, #c7e1ed 100%);
+}
+.bg-gradient-tertiary {
+  background: linear-gradient(135deg, #c7e1ed 0%, #b8d9e8 100%);
+}
+
+.section-title {
+  background: linear-gradient(45deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fund-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.info-item {
+  border-left: 4px solid;
+}
+
+.info-item:hover {
+  transform: translateX(5px);
   transition: all 0.3s ease;
 }
 
-.fund-row:hover {
-  background: rgba(255, 193, 7, 0.1) !important;
-}
-
+/* Table - Gradient header */
 .fund-table {
   border-collapse: separate;
   border-spacing: 0;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
 }
 
 .fund-table th {
-  background: linear-gradient(90deg, #ffc107, #ff5722);
-  color: #1a1a2e !important;
+  background: linear-gradient(90deg, #3498db, #9b59b6) !important;
+  color: #fff !important;
+  border: none;
 }
 
 .fund-table td {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 193, 7, 0.2);
+  background: #f8f9fa;
+  border: 1px solid rgba(52, 152, 219, 0.1);
+  color: #2c3e50;
 }
 
-.fund-table tr:last-child td {
-  border-radius: 0 0 8px 8px;
+.fund-row:hover {
+  background: rgba(52, 152, 219, 0.05) !important;
+  transition: background 0.3s ease;
 }
 
-/* Buttons */
-.btn-warning {
-  background: linear-gradient(45deg, #ffc107, #ff5722) !important;
+/* CTA */
+.cta-title {
+  background: linear-gradient(45deg, #3498db, #f39c12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-btn {
+  background: linear-gradient(45deg, #9b59b6, #f39c12) !important;
   border: none !important;
-  color: #1a1a2e !important;
+  color: #fff !important;
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
-.btn-outline-warning {
-  border-color: #ffc107 !important;
-  color: #ffc107 !important;
+/* Footer - Vibrant gradient matching theme */
+.footer {
+  background: linear-gradient(135deg, #e8f4fd 0%, #d5e8f2 100%);
+  color: rgba(44, 62, 80, 0.9);
+  padding: 2rem 0 1rem;
+  border-top: 1px solid rgba(52, 152, 219, 0.2);
 }
 
-.btn-outline-warning:hover {
-  background: #ffc107 !important;
-  color: #1a1a2e !important;
+.footer-link,
+.footer-text {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Icons - Add Font Awesome */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+.footer-link:hover,
+.footer-text:hover {
+  color: #9b59b6;
+}
 
-/* Responsive */
+/* Responsive Enhancements */
 @media (max-width: 768px) {
   .hero-section {
-    background-attachment: scroll;
+    text-align: center;
+    min-height: auto;
   }
+
+  .hero-content {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-img {
+    max-height: 300px;
+  }
+
   .appbar-title {
-    font-size: 1.4rem !important;
+    font-size: 1.5rem !important;
   }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
   .fund-table {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .bottom-content {
+    flex-direction: column !important;
+    gap: 8px;
+  }
+
+  .btn-lg {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 
-/* Footer */
-.footer {
-  background: #0f0f23;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 3rem 0 1rem;
-  text-align: center;
+@media (max-width: 576px) {
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .marquee-text {
+    font-size: 0.95rem;
+  }
 }
 
-.footer a {
-  color: #ffc107;
-  text-decoration: none;
+/* Animations */
+* {
+  transition: all 0.3s ease;
 }

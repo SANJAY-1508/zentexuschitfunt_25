@@ -1,3 +1,4 @@
+// Home.jsx - Enhanced with colorful Key Information and vibrant gradients
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,40 +16,38 @@ const Home = () => {
     AOS.init({
       offset: 100,
       delay: 200,
-      duration: 1000,
-      easing: "ease-out-back",
+      duration: 800,
+      easing: "ease-out-cubic",
       once: true,
     });
   }, []);
 
   const fundPlans = [
-    { plan: "₹100 X 45 WEEKS", total: "₹4500 + ₹500", amount: "₹5000" },
-    { plan: "₹300 X 9 MONTHS", total: "₹2700 + ₹300", amount: "₹3000" },
-    { plan: "₹500 X 9 MONTHS", total: "₹4500 + ₹500", amount: "₹5000" },
-    { plan: "₹1000 X 9 MONTHS", total: "₹9000 + ₹1000", amount: "₹10000" },
-    { plan: "₹2000 X 9 MONTHS", total: "₹18000 + ₹2000", amount: "₹20000" },
+    { plan: "₹100 X 45 WEEKS", total: "₹4500 + ₹500", amount: "5000" },
+    { plan: "₹300 X 9 MONTHS", total: "₹2700 + ₹300", amount: "3000" },
+    { plan: "₹500 X 9 MONTHS", total: "₹4500 + ₹500", amount: "5000" },
+    { plan: "₹1000 X 9 MONTHS", total: "₹9000 + ₹1000", amount: "10000" },
+    { plan: "₹2000 X 9 MONTHS", total: "₹18000 + ₹2000", amount: "20000" },
   ];
 
   return (
     <>
-      <div className="over">
-        <AppBar />
-      </div>
-      <div className="min-h-screen">
-        {/* Hero Section - Enhanced with overlay and CTA */}
-        <section className="hero-section position-relative">
-          <div className="hero-overlay"></div>
-          <Container className="position-relative z-index-1">
-            <Row className="align-items-center min-vh-75">
-              <Col lg={6}>
+      <AppBar />
+      <div className="main-content">
+        {/* Hero Section - Vibrant professional gradient */}
+        <section className="hero-section position-relative overflow-hidden">
+          <div className="hero-bg"></div>
+          <Container className="position-relative z-2 py-5">
+            <Row className="align-items-center min-vh-70">
+              <Col lg={6} className="order-lg-1 order-2">
                 <div
-                  className="hero-content text-white pe-lg-5"
+                  className="hero-content text-dark pe-lg-5"
                   data-aos="fade-right"
                 >
-                  <h1 className="display-3 fw-bold mb-4 lh-1">
+                  <h1 className="display-3 fw-bold mb-4 lh-1 hero-title">
                     Diwali Crackers Fund 2026
                   </h1>
-                  <p className="lead fs-3 mb-4 opacity-90">
+                  <p className="lead fs-4 mb-4 opacity-90 hero-desc">
                     Secure your festive joy with easy monthly installments. Get
                     1.5 months free bonus + 60% discount on bookings. Guaranteed
                     delivery before Diwali!
@@ -57,16 +56,16 @@ const Home = () => {
                     <Button
                       variant="warning"
                       size="lg"
-                      className="px-5 py-3 fw-bold rounded-0 border-0 shadow-lg"
+                      className="px-5 py-3 fw-bold rounded-pill shadow-lg hero-btn-primary"
                       data-aos="zoom-in"
                       data-aos-delay="200"
                     >
                       Start Booking Now
                     </Button>
                     <Button
-                      variant="outline-light"
+                      variant="outline-warning"
                       size="lg"
-                      className="px-5 py-3 fw-bold rounded-0 border-2 shadow-lg"
+                      className="px-5 py-3 fw-bold rounded-pill shadow-lg hero-btn-secondary"
                       data-aos="zoom-in"
                       data-aos-delay="400"
                     >
@@ -75,31 +74,35 @@ const Home = () => {
                   </div>
                 </div>
               </Col>
-              <Col lg={6}>
-                <img
-                  src={img2}
-                  className="hero-img w-100"
-                  alt="Diwali Crackers Fund"
+              <Col lg={6} className="order-lg-2 order-1 mb-4 mb-lg-0">
+                <div
+                  className="hero-image-wrapper"
                   data-aos="fade-left"
                   data-aos-delay="600"
-                />
+                >
+                  <img
+                    src={img2}
+                    className="hero-img img-fluid rounded-4 shadow-xl"
+                    alt="Diwali Crackers Fund"
+                  />
+                </div>
               </Col>
             </Row>
           </Container>
         </section>
 
-        {/* Fund Details Section - Professional Cards */}
-        <section className="fund-details-section py-5">
+        {/* Fund Details Section - Vibrant gradient bg */}
+        <section className="fund-details-section py-5 bg-gradient-primary">
           <Container>
             <Row className="justify-content-center mb-5">
               <Col lg={10}>
                 <h2
-                  className="text-center text-white fw-bold display-4 mb-3"
+                  className="text-center fw-bold display-4 mb-3 section-title"
                   data-aos="fade-down"
                 >
                   Fund Details & Savings Plans
                 </h2>
-                <p className="text-center text-white-50 lead mb-0">
+                <p className="text-center text-muted lead mb-0">
                   Transparent, secure, and tailored for your Diwali celebrations
                 </p>
               </Col>
@@ -107,71 +110,77 @@ const Home = () => {
             <Row className="g-4">
               <Col lg={6}>
                 <Card
-                  className="fund-card h-100 border-0 shadow-xl bg-dark bg-opacity-80 text-white"
+                  className="fund-card h-100 border-0 shadow-xl bg-white"
                   data-aos="fade-up"
                 >
-                  <Card.Body className="p-5">
-                    <Card.Title className="h4 fw-bold text-gold mb-4">
-                      <i className="fas fa-info-circle me-2"></i>Key Information
+                  <Card.Body className="p-4 p-lg-5">
+                    <Card.Title className="h3 fw-bold text-gold mb-4 d-flex align-items-center">
+                      <i className="fas fa-info-circle me-2 fs-4"></i>Key
+                      Information
                     </Card.Title>
                     <ul className="list-unstyled ps-0">
-                      <li className="mb-4 p-3 bg-light bg-opacity-10 rounded-3 d-flex align-items-center">
-                        <i className="fas fa-calendar-alt text-gold me-3 fs-5"></i>
-                        <div>
-                          <strong>Fund Period:</strong> October 2025 - July 2026
-                        </div>
-                      </li>
-                      <li className="mb-4 p-3 bg-light bg-opacity-10 rounded-3 d-flex align-items-center">
-                        <i className="fas fa-credit-card text-gold me-3 fs-5"></i>
-                        <div>
-                          <strong>Installments:</strong> Due before 10th of
-                          every month
-                        </div>
-                      </li>
-                      <li className="mb-4 p-3 bg-light bg-opacity-10 rounded-3 d-flex align-items-center">
-                        <i className="fas fa-tag text-gold me-3 fs-5"></i>
-                        <div>
-                          <strong>Booking:</strong> 10 Aug 2026 | 60% Discount
-                          Applied
-                        </div>
-                      </li>
-                      <li className="mb-4 p-3 bg-light bg-opacity-10 rounded-3 d-flex align-items-center">
-                        <i className="fas fa-truck text-gold me-3 fs-5"></i>
-                        <div>
-                          <strong>Dispatch:</strong> End of Aug 2026 | Parcel
-                          Service
-                        </div>
-                      </li>
-                      <li className="mb-4 p-3 bg-light bg-opacity-10 rounded-3 d-flex align-items-center">
-                        <i className="fas fa-exclamation-triangle text-gold me-3 fs-5"></i>
-                        <div>
-                          <strong>Missed Payment:</strong> 60% Discount | No
-                          Bonus
-                        </div>
-                      </li>
-                      <li className="p-3 bg-light bg-opacity-10 rounded-3 d-flex align-items-center">
-                        <i className="fas fa-shipping-fast text-gold me-3 fs-5"></i>
-                        <div>
-                          <strong>Free Shipping:</strong> Tamilnadu Only
-                        </div>
-                      </li>
+                      {[
+                        {
+                          icon: "fas fa-calendar-alt",
+                          text: "Fund Period: October 2025 - July 2026",
+                          colorClass: "text-info",
+                        },
+                        {
+                          icon: "fas fa-credit-card",
+                          text: "Installments: Due before 10th of every month",
+                          colorClass: "text-success",
+                        },
+                        {
+                          icon: "fas fa-tag",
+                          text: "Booking: 10 Aug 2026 | 60% Discount Applied",
+                          colorClass: "text-warning",
+                        },
+                        {
+                          icon: "fas fa-truck",
+                          text: "Dispatch: End of Aug 2026 | Parcel Service",
+                          colorClass: "text-primary",
+                        },
+                        {
+                          icon: "fas fa-exclamation-triangle",
+                          text: "Missed Payment: 60% Discount | No Bonus",
+                          colorClass: "text-danger",
+                        },
+                        {
+                          icon: "fas fa-shipping-fast",
+                          text: "Free Shipping: Tamilnadu Only",
+                          colorClass: "text-secondary",
+                        },
+                      ].map((item, idx) => (
+                        <li
+                          key={idx}
+                          className={`mb-3 p-3 bg-light rounded-3 d-flex align-items-start info-item ${item.colorClass}`}
+                        >
+                          <i
+                            className={`${item.icon} me-3 fs-4 mt-1 flex-shrink-0`}
+                          ></i>
+                          <div>
+                            <strong className="d-block mb-1">
+                              {item.text.split(":")[0]}:
+                            </strong>
+                            <span>{item.text.split(":")[1]}</span>
+                          </div>
+                        </li>
+                      ))}
                     </ul>
                   </Card.Body>
                 </Card>
               </Col>
               <Col lg={6}>
                 <Card
-                  className="fund-card h-100 border-0 shadow-xl bg-dark bg-opacity-80 text-white"
+                  className="fund-card h-100 border-0 shadow-xl bg-white"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  <Card.Body className="p-5">
-                    <Card.Title className="h4 fw-bold text-gold mb-4 text-center">
+                  <Card.Body className="p-4 p-lg-5">
+                    <Card.Title className="h3 fw-bold text-gold mb-4 text-center">
                       Plan Summary
                     </Card.Title>
-                    <div className="table-responsive">
-                      <FundTable data={fundPlans} />
-                    </div>
+                    <FundTable data={fundPlans} />
                   </Card.Body>
                 </Card>
               </Col>
@@ -179,18 +188,18 @@ const Home = () => {
           </Container>
         </section>
 
-        {/* Plans Section - Grid with Icons */}
-        <section className="plans-section py-5 bg-dark bg-opacity-20">
+        {/* Plans Section - Attractive gradient */}
+        <section className="plans-section py-5 bg-gradient-secondary">
           <Container>
             <Row className="justify-content-center mb-5">
               <Col lg={8}>
                 <h2
-                  className="text-center text-white fw-bold display-4 mb-3"
+                  className="text-center fw-bold display-4 mb-3 section-title"
                   data-aos="fade-down"
                 >
                   Choose Your Plan
                 </h2>
-                <p className="text-center text-white-50 lead">
+                <p className="text-center text-muted lead">
                   Flexible options to suit every budget – Light up Diwali
                   brighter!
                 </p>
@@ -239,30 +248,28 @@ const Home = () => {
                   totalText: "20000",
                 },
               ].map((plan, index) => (
-                <Col lg={4} md={6} key={index}>
-                  <FundPlanCard
-                    {...plan}
-                    data-aos="zoom-in"
-                    data-aos-delay={index * 100}
-                  />
+                <Col lg={4} md={6} xs={12} key={index}>
+                  <div data-aos="zoom-in" data-aos-delay={index * 150}>
+                    <FundPlanCard {...plan} />
+                  </div>
                 </Col>
               ))}
             </Row>
           </Container>
         </section>
 
-        {/* Testimonials Section - New Addition for Professional Touch */}
-        <section className="testimonials-section py-5 bg-gold bg-opacity-10">
+        {/* Testimonials Section - Subtle colorful gradient */}
+        <section className="testimonials-section py-5 bg-gradient-tertiary">
           <Container>
             <Row className="justify-content-center mb-5">
               <Col lg={8}>
                 <h2
-                  className="text-center text-white fw-bold display-4 mb-3"
+                  className="text-center fw-bold display-4 mb-3 section-title"
                   data-aos="fade-down"
                 >
                   What Our Customers Say
                 </h2>
-                <p className="text-center text-white-50 lead">
+                <p className="text-center lead mb-0 text-muted">
                   Join thousands who saved big this Diwali
                 </p>
               </Col>
@@ -287,13 +294,13 @@ const Home = () => {
               ].map((testimonial, index) => (
                 <Col lg={4} key={index}>
                   <Card
-                    className="border-0 shadow-xl h-100 bg-dark bg-opacity-80 text-white"
+                    className="border-0 shadow-xl h-100 bg-white"
                     data-aos="fade-up"
                     data-aos-delay={index * 200}
                   >
                     <Card.Body className="p-4 text-center">
                       <i className="fas fa-quote-left text-gold fs-1 mb-3"></i>
-                      <p className="lead mb-4 opacity-90">
+                      <p className="lead mb-4 text-dark opacity-90 fs-6">
                         "{testimonial.quote}"
                       </p>
                       <h6 className="fw-bold text-gold">{testimonial.name}</h6>
@@ -305,22 +312,22 @@ const Home = () => {
           </Container>
         </section>
 
-        {/* CTA Section */}
-        <section className="cta-section py-5">
+        {/* CTA Section - Vibrant gradient CTA */}
+        <section className="cta-section py-5 bg-gradient-primary">
           <Container>
             <Row className="justify-content-center">
               <Col lg={8} className="text-center">
-                <h2 className="fw-bold mb-3 text-white display-5">
+                <h2 className="fw-bold mb-3 text-dark display-5 cta-title">
                   Ready to Sparkle This Diwali?
                 </h2>
-                <p className="lead text-white-50 mb-4">
+                <p className="lead text-muted mb-4">
                   Download the app for seamless tracking, reminders, and
                   exclusive offers
                 </p>
                 <Button
                   variant="warning"
                   size="lg"
-                  className="px-6 py-3 fw-bold rounded-pill shadow-lg fs-4"
+                  className="px-5 py-3 fw-bold rounded-pill shadow-lg fs-5 cta-btn"
                 >
                   <i className="fas fa-download me-2"></i>Download APK Now
                 </Button>
