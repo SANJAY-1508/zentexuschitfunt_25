@@ -9,7 +9,7 @@ import FundTable from "./components/FundTable";
 import FundPlanCard from "./components/FundPlanCard";
 import HowItWorks from "./components/HowItWorks";
 import img1 from "../assets/diwali-chit-fund-banner-D2a1cjBH (1).jpeg";
-import img2 from "../assets/diwali-chit-fund-banner-D2a1cjBH (1).jpeg";
+import img2 from "../assets/money_img.jpg";
 import { fundPlans, testimonials, steps } from "./components/Data";
 
 const Home = () => {
@@ -77,7 +77,7 @@ const Home = () => {
                   data-aos-delay="600"
                 >
                   <img
-                    src={img2}
+                    src={img1}
                     className="hero-img img-fluid rounded-4 shadow-xl"
                     alt="Diwali Crackers Fund"
                   />
@@ -122,66 +122,95 @@ const Home = () => {
                 </Card>
               </Col>
               <Col lg={12}>
-                <Card
-                  className="fund-card h-100 border-0 shadow-xl bg-white"
-                  data-aos="fade-up"
-                >
-                  <Card.Body className="p-4 p-lg-5">
-                    <Card.Title className="h3 fw-bold text-gold mb-4 d-flex align-items-center">
-                      <i className="fas fa-info-circle me-2 fs-4"></i>Key
-                      Information
-                    </Card.Title>
-                    <ul className="list-unstyled ps-0">
-                      {[
-                        {
-                          icon: "fas fa-calendar-alt",
-                          text: "Fund Period: October 2025 - July 2026",
-                          colorClass: "text-info",
-                        },
-                        {
-                          icon: "fas fa-credit-card",
-                          text: "Installments: Due before 10th of every month",
-                          colorClass: "text-success",
-                        },
-                        {
-                          icon: "fas fa-tag",
-                          text: "Booking: 10 Aug 2026 | 60% Discount Applied",
-                          colorClass: "text-warning",
-                        },
-                        {
-                          icon: "fas fa-truck",
-                          text: "Dispatch: End of Aug 2026 | Parcel Service",
-                          colorClass: "text-primary",
-                        },
-                        {
-                          icon: "fas fa-exclamation-triangle",
-                          text: "Missed Payment: 60% Discount | No Bonus",
-                          colorClass: "text-danger",
-                        },
-                        {
-                          icon: "fas fa-shipping-fast",
-                          text: "Free Shipping: Tamilnadu Only",
-                          colorClass: "text-secondary",
-                        },
-                      ].map((item, idx) => (
-                        <li
-                          key={idx}
-                          className={`mb-3 p-3 bg-light rounded-3 d-flex align-items-start info-item ${item.colorClass}`}
-                        >
-                          <i
-                            className={`${item.icon} me-3 fs-4 mt-1 flex-shrink-0`}
-                          ></i>
-                          <div>
-                            <strong className="d-block mb-1">
-                              {item.text.split(":")[0]}:
-                            </strong>
-                            <span>{item.text.split(":")[1]}</span>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </Card.Body>
-                </Card>
+                <Row className="justify-content-center align-items-stretch g-4">
+                  {/* Left Side Image */}
+                  <Col lg={3} md={3} className="d-none d-lg-block">
+                    <div className="side-image-left h-100">
+                      <img
+                        src={img2}
+                        className="img-fluid rounded-3 shadow h-50"
+                        alt="Decorative Left"
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                  </Col>
+
+                  {/* Center Key Information */}
+                  <Col lg={6} md={6}>
+                    <Card
+                      className="fund-card h-100 border-0 shadow-xl bg-white text-center"
+                      data-aos="fade-up"
+                    >
+                      <Card.Body className="p-4 p-lg-5 d-flex flex-column justify-content-center">
+                        <Card.Title className="h3 fw-bold text-gold mb-4 d-flex align-items-center justify-content-center">
+                          <i className="fas fa-info-circle me-2 fs-4"></i>Key
+                          Information
+                        </Card.Title>
+                        <ul className="list-unstyled ps-0">
+                          {[
+                            {
+                              icon: "fas fa-calendar-alt",
+                              text: "Fund Period: October 2025 - July 2026",
+                              colorClass: "text-info",
+                            },
+                            {
+                              icon: "fas fa-credit-card",
+                              text: "Installments: Due before 10th of every month",
+                              colorClass: "text-success",
+                            },
+                            {
+                              icon: "fas fa-tag",
+                              text: "Booking: 10 Aug 2026 | 60% Discount Applied",
+                              colorClass: "text-warning",
+                            },
+                            {
+                              icon: "fas fa-truck",
+                              text: "Dispatch: End of Aug 2026 | Parcel Service",
+                              colorClass: "text-primary",
+                            },
+                            {
+                              icon: "fas fa-exclamation-triangle",
+                              text: "Missed Payment: 60% Discount | No Bonus",
+                              colorClass: "text-danger",
+                            },
+                            {
+                              icon: "fas fa-shipping-fast",
+                              text: "Free Shipping: Tamilnadu Only",
+                              colorClass: "text-secondary",
+                            },
+                          ].map((item, idx) => (
+                            <li
+                              key={idx}
+                              className={`mb-3 p-3 bg-light rounded-3 d-flex align-items-start justify-content-center info-item ${item.colorClass}`}
+                            >
+                              <i
+                                className={`${item.icon} me-3 fs-4 mt-1 flex-shrink-0`}
+                              ></i>
+                              <div className="text-start flex-grow-1">
+                                <strong className="d-block mb-1">
+                                  {item.text.split(":")[0]}:
+                                </strong>
+                                <span>{item.text.split(":")[1]}</span>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+
+                  {/* Right Side Image */}
+                  <Col lg={3} md={3} className="d-none d-lg-block">
+                    <div className="side-image-right h-100">
+                      <img
+                        src={img2}
+                        className="img-fluid rounded-3 shadow h-50"
+                        alt="Decorative Right"
+                        style={{ objectFit: "cover" }}
+                      />
+                    </div>
+                  </Col>
+                </Row>
               </Col>
             </Row>
           </Container>
