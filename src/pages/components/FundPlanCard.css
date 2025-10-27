@@ -50,8 +50,8 @@
 }
 
 .big-circle {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   background: linear-gradient(
     135deg,
     rgba(52, 152, 219, 0.2),
@@ -71,8 +71,8 @@
 }
 
 .small-circle {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background: linear-gradient(
     135deg,
     rgba(52, 152, 219, 0.3),
@@ -98,7 +98,7 @@
 .small-circle p {
   margin: 0;
   font-size: 14px;
-  color: #2c3e50;
+  color: white;
   font-weight: 500;
 }
 
