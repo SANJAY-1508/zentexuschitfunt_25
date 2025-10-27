@@ -1,4 +1,4 @@
-// AppBar.jsx - Updated with vibrant, attractive gradient matching Fund Details
+// AppBar.jsx - Enhanced with better animations
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Marquee from "react-fast-marquee";

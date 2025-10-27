@@ -1,4 +1,4 @@
-// FundTable.jsx - Professional table with gradient header
+// FundTable.jsx - Enhanced with better hover effects
 import React from "react";
 
 const FundTable = ({ data }) => {
@@ -7,11 +7,11 @@ const FundTable = ({ data }) => {
       <table className="fund-table w-100">
         <thead>
           <tr>
-            <th className="py-3 px-3 text-start fw-bold text-dark">Plan</th>
-            <th className="py-3 px-3 text-center fw-bold text-dark">
+            <th className="py-3 px-3 text-start fw-bold text-white">Plan</th>
+            <th className="py-3 px-3 text-center fw-bold text-white">
               Installments + Bonus
             </th>
-            <th className="py-3 px-3 text-end fw-bold text-gold">
+            <th className="py-3 px-3 text-end fw-bold text-white">
               Total Amount
             </th>
           </tr>

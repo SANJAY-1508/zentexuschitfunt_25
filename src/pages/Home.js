@@ -1,8 +1,8 @@
-// Home.jsx - Enhanced with colorful Key Information and vibrant gradients
+// Home.jsx - Updated with Carousel for Testimonials and IDs for smooth scroll
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
 import AppBar from "./components/AppBar";
 import Footer from "./components/Footer";
@@ -30,12 +30,31 @@ const Home = () => {
     { plan: "₹2000 X 9 MONTHS", total: "₹18000 + ₹2000", amount: "20000" },
   ];
 
+  const testimonials = [
+    {
+      quote:
+        "Saved ₹2000 on crackers last year! Easy payments and fast delivery.",
+      name: "Ravi Kumar, Chennai",
+    },
+    {
+      quote: "The bonus months made all the difference. Highly recommend!",
+      name: "Priya S, Coimbatore",
+    },
+    {
+      quote: "Professional service from start to finish. Diwali was explosive!",
+      name: "Arun M, Madurai",
+    },
+  ];
+
   return (
     <>
       <AppBar />
       <div className="main-content">
-        {/* Hero Section - Vibrant professional gradient */}
-        <section className="hero-section position-relative overflow-hidden">
+        {/* Hero Section - ID for smooth scroll */}
+        <section
+          id="home"
+          className="hero-section position-relative overflow-hidden"
+        >
           <div className="hero-bg"></div>
           <Container className="position-relative z-2 py-5">
             <Row className="align-items-center min-vh-70">
@@ -91,8 +110,11 @@ const Home = () => {
           </Container>
         </section>
 
-        {/* Fund Details Section - Vibrant gradient bg */}
-        <section className="fund-details-section py-5 bg-gradient-primary">
+        {/* Fund Details Section - ID for smooth scroll */}
+        <section
+          id="plans"
+          className="fund-details-section py-5 bg-gradient-primary"
+        >
           <Container>
             <Row className="justify-content-center mb-5">
               <Col lg={10}>
@@ -188,8 +210,11 @@ const Home = () => {
           </Container>
         </section>
 
-        {/* Plans Section - Attractive gradient */}
-        <section className="plans-section py-5 bg-gradient-secondary">
+        {/* Plans Section - ID for smooth scroll */}
+        <section
+          id="download"
+          className="plans-section py-5 bg-gradient-secondary"
+        >
           <Container>
             <Row className="justify-content-center mb-5">
               <Col lg={8}>
@@ -258,7 +283,7 @@ const Home = () => {
           </Container>
         </section>
 
-        {/* Testimonials Section - Subtle colorful gradient */}
+        {/* Testimonials Section - Updated to Carousel */}
         <section className="testimonials-section py-5 bg-gradient-tertiary">
           <Container>
             <Row className="justify-content-center mb-5">
@@ -274,46 +299,38 @@ const Home = () => {
                 </p>
               </Col>
             </Row>
-            <Row className="g-4">
-              {[
-                {
-                  quote:
-                    "Saved ₹2000 on crackers last year! Easy payments and fast delivery.",
-                  name: "Ravi Kumar, Chennai",
-                },
-                {
-                  quote:
-                    "The bonus months made all the difference. Highly recommend!",
-                  name: "Priya S, Coimbatore",
-                },
-                {
-                  quote:
-                    "Professional service from start to finish. Diwali was explosive!",
-                  name: "Arun M, Madurai",
-                },
-              ].map((testimonial, index) => (
-                <Col lg={4} key={index}>
-                  <Card
-                    className="border-0 shadow-xl h-100 bg-white"
-                    data-aos="fade-up"
-                    data-aos-delay={index * 200}
-                  >
-                    <Card.Body className="p-4 text-center">
-                      <i className="fas fa-quote-left text-gold fs-1 mb-3"></i>
-                      <p className="lead mb-4 text-dark opacity-90 fs-6">
-                        "{testimonial.quote}"
-                      </p>
-                      <h6 className="fw-bold text-gold">{testimonial.name}</h6>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
+            <Row className="justify-content-center">
+              <Col lg={8}>
+                <Carousel
+                  interval={3000}
+                  indicators={false}
+                  controls={true}
+                  className="testimonials-carousel"
+                  data-aos="fade-up"
+                >
+                  {testimonials.map((testimonial, index) => (
+                    <Carousel.Item key={index}>
+                      <Card className="border-0 shadow-xl bg-white mx-3">
+                        <Card.Body className="p-5 text-center">
+                          <i className="fas fa-quote-left text-gold fs-1 mb-3"></i>
+                          <p className="lead mb-4 text-dark opacity-90 fs-5">
+                            "{testimonial.quote}"
+                          </p>
+                          <h6 className="fw-bold text-gold">
+                            {testimonial.name}
+                          </h6>
+                        </Card.Body>
+                      </Card>
+                    </Carousel.Item>
+                  ))}
+                </Carousel>
+              </Col>
             </Row>
           </Container>
         </section>
 
-        {/* CTA Section - Vibrant gradient CTA */}
-        <section className="cta-section py-5 bg-gradient-primary">
+        {/* CTA Section - ID for smooth scroll */}
+        <section id="cta" className="cta-section py-5 bg-gradient-primary">
           <Container>
             <Row className="justify-content-center">
               <Col lg={8} className="text-center">
