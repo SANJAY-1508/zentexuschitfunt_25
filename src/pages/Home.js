@@ -7,6 +7,7 @@ import AppBar from "./components/AppBar";
 import Footer from "./components/Footer";
 import FundTable from "./components/FundTable";
 import FundPlanCard from "./components/FundPlanCard";
+import HowItWorks from "./components/HowItWorks";
 import img1 from "../assets/diwali-chit-fund-banner-D2a1cjBH (1).jpeg";
 import img2 from "../assets/diwali-chit-fund-banner-D2a1cjBH (1).jpeg";
 
@@ -42,6 +43,75 @@ const Home = () => {
     {
       quote: "Professional service from start to finish. Diwali was explosive!",
       name: "Arun M, Madurai",
+    },
+  ];
+
+  const steps = [
+    {
+      stepNumber: 1,
+      heading: "Choose your plan from our plan list",
+      description:
+        "You can choose between plans and you can purchase any number of plans you like. This makes you choose the amount of fund you need for your Diwali plan",
+      imageSrc:
+        "https://asset.iamretailer.com/resto/catalog/view/theme/goodwill/images/plans/analysis.png",
+      imageAlt: "choose",
+      imageClass: "howchoose",
+      position: "right", // Image on right
+    },
+    {
+      stepNumber: 2,
+      heading: "Submit us the Register form",
+      description:
+        "Submit your information with the registration form presents in this page. Kindly fill the validation communication details to contact you at right time with the information.",
+      imageSrc:
+        "https://asset.iamretailer.com/resto/catalog/view/theme/goodwill/images/plans/record.png",
+      imageAlt: "register",
+      imageClass: "howsubmit",
+      position: "left", // Image on left
+    },
+    {
+      stepNumber: 3,
+      heading: "Pay with the link/ UPI, Bank transfer or the Account generated",
+      description:
+        "Once the form submitted we will create a separate account for you and you will be received Mail and SMS for your account. you can deposit your every month amount into that. Or you can pay via any of the payment options available in the terms and conditons",
+      imageSrc:
+        "https://asset.iamretailer.com/resto/catalog/view/theme/goodwill/images/plans/card.png",
+      imageAlt: "account",
+      imageClass: "howpay",
+      position: "right",
+    },
+    {
+      stepNumber: 4,
+      heading: "Amount credit to Goodwill Fireworks Crackers wallet",
+      description:
+        "At the end of scheme the amount will be credited into goodwillfireworks.com wallet with the bonus amount and you will be notified via Email and SMS",
+      imageSrc:
+        "https://asset.iamretailer.com/resto/catalog/view/theme/goodwill/images/plans/purse.png",
+      imageAlt: "credit",
+      imageClass: "howamount",
+      position: "left",
+    },
+    {
+      stepNumber: 5,
+      heading: "Login with your mobile number at goodwillfireworks.in",
+      description:
+        "Login with your registered mobile number or email with our site and you can able to view the amount credited into wallet with bonus amount",
+      imageSrc:
+        "https://asset.iamretailer.com/resto/catalog/view/theme/goodwill/images/plans/key.png",
+      imageAlt: "login",
+      imageClass: "howlogin",
+      position: "right",
+    },
+    {
+      stepNumber: 6,
+      heading: "Enjoy the crackers purchase",
+      description:
+        "You can choose your desired products and can purchase with the wallet amount you have in your wallet and Enjoy the celebration!",
+      imageSrc:
+        "https://asset.iamretailer.com/resto/catalog/view/theme/goodwill/images/plans/cart.png",
+      imageAlt: "purchase",
+      imageClass: "howenjoy",
+      position: "left",
     },
   ];
 
@@ -278,7 +348,7 @@ const Home = () => {
             </Row>
           </Container>
         </section>
-
+        <HowItWorks title="How this works" steps={steps} />
         {/* Testimonials Section - Updated to Carousel */}
         <section className="testimonials-section py-5 bg-gradient-tertiary">
           <Container>
