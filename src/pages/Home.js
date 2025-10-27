@@ -107,7 +107,7 @@ const Home = () => {
               </Col>
             </Row>
             <Row className="g-4">
-              <Col lg={6}>
+              <Col lg={12}>
                 <Card
                   className="fund-card h-100 border-0 shadow-xl bg-white"
                   data-aos="fade-up"
@@ -169,7 +169,7 @@ const Home = () => {
                   </Card.Body>
                 </Card>
               </Col>
-              <Col lg={6}>
+              <Col lg={12}>
                 <Card
                   className="fund-card h-70 border-0 shadow-xl bg-white"
                   data-aos="fade-up"
