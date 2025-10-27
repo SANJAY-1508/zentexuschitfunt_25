@@ -1,0 +1,69 @@
+.fund-plans {
+  background-color: #ffffff1a;
+  border-radius: 5px;
+}
+
+.fund-plan-container {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #813a8a;
+  color: white;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.fund-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* OUTER BIG CIRCLE */
+.big-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INNER SMALL CIRCLE */
+.small-circle {
+  width: 130px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.small-circle h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffb300; /* same yellow text as sample */
+}
+
+.small-circle p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* BOTTOM CONTENT */
+.bottom-content {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
