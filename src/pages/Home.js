@@ -193,12 +193,12 @@ const Home = () => {
               </Col>
               <Col lg={6}>
                 <Card
-                  className="fund-card h-100 border-0 shadow-xl bg-white"
+                  className="fund-card h-70 border-0 shadow-xl bg-white"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
                   <Card.Body className="p-4 p-lg-5">
-                    <Card.Title className="h3 fw-bold text-gold mb-4 text-center">
+                    <Card.Title className="h3 fw-bold text-gold mb-4 text-center fund-table-title">
                       Plan Summary
                     </Card.Title>
                     <FundTable data={fundPlans} />
