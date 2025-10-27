@@ -211,10 +211,7 @@ const Home = () => {
         </section>
 
         {/* Plans Section - ID for smooth scroll */}
-        <section
-          id="download"
-          className="plans-section py-5 bg-gradient-secondary"
-        >
+        <section className="plans-section py-5 bg-gradient-secondary">
           <Container>
             <Row className="justify-content-center mb-5">
               <Col lg={8}>
@@ -330,7 +327,7 @@ const Home = () => {
         </section>
 
         {/* CTA Section - ID for smooth scroll */}
-        <section id="cta" className="cta-section py-5 bg-gradient-primary">
+        <section id="download" className="cta-section py-5 bg-gradient-primary">
           <Container>
             <Row className="justify-content-center">
               <Col lg={8} className="text-center">
